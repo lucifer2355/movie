@@ -1,13 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
 import App from "./containers/App";
 import * as serviceWorker from "./serviceWorker";
+import { ThemeProvider } from "styled-components";
+import theme from "./utils/theme";
+import GlobalStyle from "./utils/globals";
+
+import "../node_modules/react-modal-video/scss/modal-video.scss";
+import "../node_modules/slick-carousel/slick/slick.css";
+import "../node_modules/slick-carousel/slick/slick-theme.css";
 
 ReactDOM.render(
-  <React.StrictMode>
+  <ThemeProvider theme={theme}>
     <App />
-  </React.StrictMode>,
+    <GlobalStyle />
+  </ThemeProvider>,
   document.getElementById("root")
 );
 
