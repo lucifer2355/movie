@@ -16,3 +16,11 @@ export const getConfig = () => async (dispatch) => {
     payload: res.data,
   });
 };
+
+export const getGenres = () => async (dispatch) => {
+  const res = await tmdbAPI.get("/genre/movie/list");
+  dispatch({
+    type: TYPES.GET_GENRES,
+    payload: res.data,
+  });
+};
