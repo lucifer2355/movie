@@ -10,6 +10,8 @@ import "../node_modules/react-modal-video/scss/modal-video.scss";
 import "../node_modules/slick-carousel/slick/slick.css";
 import "../node_modules/slick-carousel/slick/slick-theme.css";
 
+require("dotenv").config();
+
 ReactDOM.render(
   <ThemeProvider theme={theme}>
     <App />
