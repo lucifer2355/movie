@@ -6,7 +6,7 @@ const initalState = {
 };
 
 export default (state = initalState, action) => {
-  switch (type.action) {
+  switch (action.type) {
     case TYPES.GET_CONFIG:
       return { ...state, base: action.payload };
     case TYPES.GET_GENRES:

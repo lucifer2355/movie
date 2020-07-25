@@ -1,6 +1,6 @@
-import { combineReducer } from "redux";
+import { combineReducers } from "redux";
 import configReducer from "./configReducer";
 
-export default combineReducer({
+export default combineReducers({
   geral: configReducer,
 });
