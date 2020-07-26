@@ -3,3 +3,6 @@ export const GET_GENRES = "GET_GENRES";
 
 export const SET_LOADING = "SET_LOADING";
 export const REMOVE_LOADING = "REMOVE_LOADING";
+
+export const SELECTED_MENU = "SELECTED_MENU";
+export const REMOVE_SELECTED_MENU = "REMOVE_SELECTED_MENU";
