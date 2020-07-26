@@ -10,9 +10,7 @@ export const init = () => async (dispatch) => {
 };
 
 export const getConfig = () => async (dispatch) => {
-  const res = await tmdbAPI.get(
-    `/configuration?api_key=${process.env.REACT_APP_API}`
-  );
+  const res = await tmdbAPI.get(`/configuration`);
   dispatch({
     type: TYPES.GET_CONFIG,
     payload: res.data,

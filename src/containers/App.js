@@ -16,16 +16,20 @@ import Sidebar from "./Sidebar";
 const MainWrapper = styled.div``;
 const ContentWrapper = styled.div``;
 
-ReactGA.initialize("UA-137885307-1");
-ReactGA.pageview(window.location.pathname + window.location.search);
+// ReactGA.initialize("UA-137885307-1");
+// ReactGA.pageview(window.location.pathname + window.location.search);
 
 function App({ init, isLoading }) {
   useEffect(() => {
     init();
   }, [init]);
 
-  return (
-    <Router history={history}>
+  return isLoading ? (
+    <div>
+      <h1>Loading</h1>
+    </div>
+  ) : (
+    <Router>
       <React.Fragment>
         <MainWrapper>
           <Sidebar />

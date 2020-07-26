@@ -11,6 +11,10 @@ export default (state = initalState, action) => {
       return { ...state, base: action.payload };
     case TYPES.GET_GENRES:
       return { ...state, ...action.payload };
+    case TYPES.SELECTED_MENU:
+      return { ...state, selected: action.payload };
+    case TYPES.REMOVE_SELECTED_MENU:
+      return { ...state, selected: null };
     case TYPES.SET_LOADING:
       return { ...state, loading: true };
     case TYPES.REMOVE_LOADING:
