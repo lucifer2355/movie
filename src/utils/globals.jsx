@@ -22,6 +22,15 @@ export default createGlobalStyle`
     html {
         font-size: 62.5%;
         box-sizing: border-box;
+        --color-primary: ${(props) => props.theme.colors.main};
+      --color-primary-dark: ${(props) => props.theme.colors.dark};
+      --color-primary-light: ${(props) => props.theme.colors.light};
+      --color-primary-lighter: ${(props) => props.theme.colors.lighter};
+      --text-color: ${(props) => props.theme.colors.text};
+      --link-color: ${(props) => props.theme.colors.link};
+      --border-color: rgba(176, 190, 197, 0.5);
+      --shadow-color: rgba(0, 0, 0, 0.2);
+      --shadow-color-dark: rgba(0, 0, 0, 0.25);
     }
 
     body {

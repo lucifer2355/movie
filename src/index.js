@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import ReactDOM from "react-dom";
 import { ThemeProvider } from "styled-components";
 import { Provider } from "react-redux";
@@ -15,8 +15,10 @@ import "../node_modules/slick-carousel/slick/slick-theme.css";
 ReactDOM.render(
   <Provider store={store}>
     <ThemeProvider theme={theme}>
-      <App />
-      <GlobalStyle />
+      <Fragment>
+        <App />
+        <GlobalStyle />
+      </Fragment>
     </ThemeProvider>
   </Provider>,
   document.getElementById("root")
