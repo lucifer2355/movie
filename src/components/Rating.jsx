@@ -20,8 +20,8 @@ const FontAwesome = styled(FontAwesomeIcon)`
 function Rating({ number }) {
   return (
     <StarsWrapper
-      emptySymbol={<FontAwesomeIcon icon={["far", "star"]} size='lg' />}
-      fullSymbol={<FontAwesomeIcon icon={["fas", "star"]} />}
+      emptySymbol={<FontAwesome icon={["far", "star"]} size='lg' />}
+      fullSymbol={<FontAwesome icon={["fas", "star"]} />}
       initialRating={number}
       readonly
     />
