@@ -65,6 +65,7 @@ function renderStatic(categories, selected) {
 }
 
 function renderGenres(genres, selected) {
+  console.log(selected);
   return genres.map((genre) => (
     <LinkWrap
       to={`${process.env.PUBLIC_URL}/genres/${genre.name}`}

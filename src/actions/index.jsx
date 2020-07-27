@@ -4,13 +4,15 @@ import history from "../history";
 
 export const init = () => async (dispatch) => {
   dispatch({ type: TYPES.SET_LOADING });
-  // await dispatch(getConfig());
+  await dispatch(getConfig());
   await dispatch(getGenres());
   dispatch({ type: TYPES.REMOVE_LOADING });
 };
 
 export const getConfig = () => async (dispatch) => {
-  const res = await tmdbAPI.get(`/configuration`);
+  const res = await tmdbAPI.get(
+    `/configuration?api_key=${process.env.REACT_APP_API}`
+  );
   dispatch({
     type: TYPES.GET_CONFIG,
     payload: res.data,

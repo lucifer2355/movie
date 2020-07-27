@@ -47,8 +47,6 @@ function renderIcon(title) {
 }
 
 function MenuItem({ title, selected }) {
-  console.log(selected);
-
   return (
     <StyledItem selected={selected}>
       <FontAwesomeIcon
